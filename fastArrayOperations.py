@@ -1,62 +1,63 @@
 import numpy as np
 
 a = np.array([0,1,2])
-""" print(a.dtype) """
+print(a.dtype)
 
 a = np.array([1,2,3], dtype='float32')
-""" print(a.astype('float32')) """
+print(a.astype('float32'))
 
 a = np.array([[0,1,2],[3,4,5]])
-""" print(a)
-print(a.shape) """
+print(a)
+print(a.shape)
 
 a = np.array([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
-""" print(a.shape)
-print(a.reshape(4,4)) """
-""" 
+
+
+print(a.shape)
+print(a.reshape(4,4))
+
 print(np.zeros((3,3)))
 print(np.empty((3,3)))
-print(np.ones((3,3))) """
+print(np.ones((3,3))) 
 
-""" 
-print(np.random.rand(3,3)) """
+print(np.random.rand(3,3))
 
 
-""" print(np.zeros_like(a)) """
+print(np.zeros_like(a))
 
 A = np.array([0,1,2,3,4,5,6,7,8])
-""" print(A[1])
+print(A[1])
 
-print([a for a in A]) """
+print([a for a in A])
 
-""" print(np.array(A[0:6]).reshape(2,3)) """
+print(np.array(A[0:6]).reshape(2,3))
 
 """ 
 BroadCasting 
  """
 
-""" A = np.array([[1,2],[3,4]])
-B = np.array([[5,6],[7,8]]) """
+A = np.array([[1,2],[3,4]])
+B = np.array([[5,6],[7,8]])
 
-""" print(A * B) """
+print(A * B)
 
 
-""" A = np.random.rand(5, 10, 2)
+A = np.random.rand(5, 10, 2)
 B = np.random.rand(5,2)
 
-print(A * B[:, np.newaxis, :]) """
+print(A * B[:, np.newaxis, :])
 
 
 
-""" print(np.sqrt(np.array([4,9,16]))) """
+print(np.sqrt(np.array([4,9,16])))
 
 
 
 
-""" a = np.random.rand(10000)
+a = np.random.rand(10000)
 b = np.random.rand(10000)
 c = np.random.rand(10000)
-d = ne.evaluate('a + b * c') """
+d = ne.evaluate('a + b * c')
 
 
 
@@ -71,7 +72,7 @@ effective = [True, True, False, False]
 
 effective_series = pd.Series(effective, index=patients)
 
-""" print(effective_series) """
+print(effective_series)
 
 
 
@@ -85,7 +86,7 @@ columns = {
 }
 
 df = pd.DataFrame(columns, index=patients)
-""" print(df) """
+print(df)
 
 """ Indexing Series and DataFrame objects """
 # print(effective_series.iloc[0])
@@ -96,16 +97,16 @@ df = pd.DataFrame(columns, index=patients)
 
 a  = pd.Series([1, 2, 3], index=["a", "b", "c"])
 b =  pd.Series([4, 5, 6], index=["a", "b", "c"])
-""" print(a + b) """
+print(a + b)
 
 b = pd.Series([4,None,5,None,6], index=["a", "b", "c" ,"d","e"])
-""" print(b) """
+print(b)
 
 a = pd.Series([1,2,3], index=["a","b","c"])
 
 def superstar(x):
     return '*' + str(x) + "->"
-""" print(a.map(superstar)) """
+print(a.map(superstar))
 
 
 
